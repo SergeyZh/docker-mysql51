@@ -40,7 +40,7 @@ EOSQL
 
         echo 'FLUSH PRIVILEGES ;' >> "$TEMP_FILE"
 
-        set -- "$@" --init-file="$TEMP_FILE"
+        set -- $1 $2 "$3 --init-file=$TEMP_FILE"
 fi
 
 chown -R mysql:mysql ${MYSQL_DATA}
