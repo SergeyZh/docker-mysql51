@@ -14,12 +14,13 @@ Usage
 =====
 
 Mount external volume to `/mnt/mysql` with the following stricture:
+
 ```
 /mnt/mysql/
        \__/data/ - MySQL data
        \__/etc/my.cnf - MySQL config
        \__/tmp/  - MySQL tmp folder (optional)
-       
+
 ```
 
 Fleet usage
