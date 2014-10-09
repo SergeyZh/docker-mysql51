@@ -19,6 +19,7 @@ if [[ ! -f /mnt/mysql/etc/my.cnf ]] ; then
 fi
 
 mysqld --defaults-file=/mnt/mysql/etc/my.cnf --basedir=${MYSQL_BASE} --datadir=${MYSQL_DATA} \
+       --log-error=/mnt/mysql/mysqld.log \
        --user=mysql --pid_file=${MYSQL_BASE}/mysql.pid $1 > /var/log/container.log 2>&1 &
 
 touch /var/log/container.log
